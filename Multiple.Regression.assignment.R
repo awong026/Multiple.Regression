@@ -271,5 +271,5 @@ plot(res ~ fitted) ##Look random, Good. No funnel shape
 qqplot(res, rnorm(length(res))) ##Kind of looks normal with some crazy outlier point at second to bottom
 
 #Conclusion:
-#After creating dummy variables. The best model is p.lm.2 model (predictors = sample , extract and response = count).
+#After creating dummy variables. The best model is p.lm.3 model (predictors = sample , extract and response = count).
 #It has the lowest AIC score and best r squared value. Also pvalue for F test was significantly low. 
