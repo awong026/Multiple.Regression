@@ -72,7 +72,7 @@ summary(new.part.lm)
 
 
 
-##Extra sum of Squares (Check to see if partial model is better fit than full model)
+##Extra sum of squares (Check to see if partial model is better fit than full model)
 anova(new.part.lm, new.full.lm) ##Since p value is above signifant we can say that partial model was better than full model
 #Looks like rain and wet.days doesn't contribute significantly to pollution
 
@@ -82,7 +82,7 @@ step <- stepAIC(new.full.lm)
 step$anova #Same as my reduced model
 
 
-######## Check residuals
+## Check residuals
 
 res <- residuals(new.part.lm)
 plot(res ~ test_pollute$temp) #Looks random but huge chance of outliers
@@ -121,7 +121,6 @@ plot(res~fitted) ##Again looks good with maybe some outliers
 ###################################
 
 #Question 2: Fit best multi regression model to data in Daphnia.txt using growth rate as response variable
-
 
 ##################################
 
@@ -233,7 +232,7 @@ data$extract <- as.numeric(extract == "bean") #Makes each bean = 1 and cucumber 
 head(data)
 pairs(data)
 
-#full model
+#Full model
 full.lm.3 <- lm(count ~ ., data = data)
 summary(full.lm.3)
 
